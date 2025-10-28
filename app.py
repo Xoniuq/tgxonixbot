@@ -34,7 +34,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # --- PASTE YOUR BOT TOKEN HERE ---
-TOKEN = "8421099743:AAGxzSnLjMT_-nKrFs_MNYtSwwtxIBJYPm0"
+TOKEN = "8368042693:AAESJ9N_iffUiey9Vzh86_3I9_RrsX-efWU"
 
 # --- ADMIN & DATA ---
 ADMINS = [8339473478]  # Replace with your admin user ID

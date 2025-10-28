@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 TOKEN = "8368042693:AAESJ9N_iffUiey9Vzh86_3I9_RrsX-efWU"
 
 # --- ADMIN & DATA ---
-ADMINS = [8339473478]  # Replace with your admin user ID
+ADMINS = [6041881834]  # Replace with your admin user ID
 
 ACCOUNTS_FOLDER = "accounts"
 USER_DATA_FILE = "𝐁𝐢𝐥𝐥𝐲_user_data.json"

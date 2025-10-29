@@ -36,6 +36,17 @@ logger = logging.getLogger(__name__)
 # --- PASTE YOUR BOT TOKEN HERE ---
 TOKEN = "8368042693:AAESJ9N_iffUiey9Vzh86_3I9_RrsX-efWU"
 
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL") 
+
+# ⚠️ Render provides the port in the PORT environment variable
+PORT = int(os.environ.get("PORT", "8443")) 
+
+# The host must be '0.0.0.0' to listen on all interfaces
+LISTEN_HOST = '0.0.0.0' 
+
+# The URL path for Telegram to send updates to (use the token or a secret)
+URL_PATH = TOKEN
+
 # --- ADMIN & DATA ---
 ADMINS = [6041881834]  # Replace with your admin user ID
 
@@ -1376,7 +1387,12 @@ def main():
     os.makedirs(ACCOUNTS_FOLDER, exist_ok=True)
 
     logger.info("Digital Vault Bot is starting...")
-    application.run_polling()
+    application.run_webhook(
+        listen=LISTEN_HOST,
+        port=PORT,
+        url_path=URL_PATH,
+        webhook_url=f"{WEBHOOK_URL}/{URL_PATH}",
+    )
 
 
 if __name__ == "__main__":
